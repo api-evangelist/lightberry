@@ -1,0 +1,54 @@
+# Lightberry
+
+> Lightberry builds conversational AI "personality" software for robots. Robots running Lightberry
+> listen, speak, perceive their surroundings, and act on natural-language instruction without the
+> owner writing code. The company is a Y Combinator Fall 2025 startup based in San Francisco, and
+> ships its software pre-installed on robots through a partnership with Unitree.
+
+Generated: 2026-07-19
+Method: generated (from the API Evangelist catalog entry and live probes; Lightberry publishes no /llms.txt)
+Source: https://lightberry.com
+
+## Status
+
+- Lightberry publishes **no public API**: no developer portal, no API reference, no OpenAPI or
+  AsyncAPI definition, no SDKs, no CLI, no sandbox, no changelog, and no status page.
+- Its documentation covers **device setup** and an internal-facing **MCP architecture** note.
+- Do not assume programmatic access exists. Contact the company directly.
+
+## Company
+
+- [Lightberry](https://lightberry.com): Robots with soul — personality software for robots.
+- [Y Combinator profile](https://www.ycombinator.com/companies/lightberry): Fall 2025 batch, founded 2025, San Francisco, CA.
+- Founders: Ali Attar, Stephan Koenigstorfer, Stephan Wolski (Head of Robotics).
+
+## Docs
+
+- [Lightberry Docs](https://docs.lightberry.com): Notion-hosted documentation.
+- Quick Start Guide: power on (micro USB, green light, ~90s boot), connect to WiFi via the
+  BTBerryWifi app (device advertises as "lb"), start a conversation (500ms-1.5s response time),
+  and set up an assistant.
+- MCP Architecture: an MCP server runs on the Lightberry server; each Lightberry device functions
+  as a REST API endpoint; the MCP server routes tool calls to the correct device id, resolving the
+  device IP via Tailscale. No server URL, transport, or tool list is published.
+
+## Hardware and partners
+
+- Robot Store: officially partnered with [Unitree](https://unitree.com); robots ship with
+  Lightberry built in.
+- Manufacturer compatibility program covering Unitree, Fourier, Booster Robotics, and High Torque
+  platforms (G1, GR-2/N1, T1/K1, Mini-Pi series).
+
+## Contact
+
+- General: hello@lightberry.com
+- Founders: founders@lightberry.com
+- [X / Twitter](https://x.com/lightberry)
+- [YouTube](https://youtube.com/@lightberryinc)
+
+## API Evangelist artifacts
+
+- [apis.yml](https://raw.githubusercontent.com/api-evangelist/lightberry/refs/heads/main/apis.yml)
+- security/lightberry-domain-security.yml: probed TLS/DNS posture (TLSv1.3, no HSTS, no DNSSEC, no CAA, SPF present, no DMARC).
+- well-known/lightberry-well-known.yml: probe record — no /.well-known/ documents published.
+- mcp/lightberry-mcp.yml: the documented (not yet shipped) MCP architecture.

@@ -1,22 +1,76 @@
 aid: lightberry
 name: Lightberry
-description: Lightberry is a company surfaced as a portfolio company of y-combinator and added to the
-  API Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: Lightberry is a San Francisco robotics software company (Y Combinator Fall 2025) that
+  builds conversational AI "personality" software for humanoid and quadruped robots. Its platform lets
+  a robot listen, speak, see its surroundings, and act on natural-language instruction without the
+  owner writing any code, emphasizing emotional intelligence, contextual awareness, and autonomy rather
+  than a simple speech-to-text voice pipeline. Lightberry ships pre-installed on robots sold through its
+  partnership with Unitree, and the company runs a manufacturer-compatibility program with robot makers
+  including Fourier, Booster Robotics, and High Torque. Its published documentation today covers device
+  setup (power-on, WiFi provisioning, starting a conversation) plus an MCP architecture note describing
+  a Model Context Protocol server that routes tool calls to individual Lightberry devices, which each
+  expose a REST endpoint. There is no public developer portal, API reference, SDK, or OpenAPI definition
+  at this time.
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
+image: https://lightberry.com/assets/images/share.jpg
 url: https://raw.githubusercontent.com/api-evangelist/lightberry/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
 - y-combinator
+x-yc-batch: Fall 2025
+x-founded: '2025'
+x-location: San Francisco, CA
 x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
+- Robotics
+- Artificial Intelligence
+- Conversational AI
+- Voice
+- Hardware
+- Model Context Protocol
+- Agents
+- Y Combinator
 apis: []
+common:
+- url: https://lightberry.com
+  type: Website
+- url: https://docs.lightberry.com
+  type: Documentation
+- url: https://docs.lightberry.com
+  type: GettingStarted
+- url: mailto:hello@lightberry.com
+  type: Support
+- url: https://x.com/lightberry
+  type: Twitter
+- url: https://youtube.com/@lightberryinc
+  type: Youtube
+- url: llms/lightberry-llms.txt
+  type: LLMsTxt
+- url: security/lightberry-domain-security.yml
+  type: DomainSecurity
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

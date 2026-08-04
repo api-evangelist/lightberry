@@ -1,7 +1,8 @@
 generated: '2026-07-19'
 method: searched
 source: https://docs.lightberry.com (Notion page "MCP Architecture", 2227fcdf-faa7-804c-ba69-e7d9e8276942)
-status: planned
+status: announced
+status_raw: planned
 note: >-
   Lightberry publicly documents an MCP architecture, but does NOT publish a consumable
   hosted or remote MCP server: there is no server URL, no transport declaration, no tool

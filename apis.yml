@@ -48,6 +48,8 @@ tags:
 - Y Combinator
 apis: []
 common:
+- type: MCPServer
+  url: mcp/lightberry-mcp.yml
 - url: https://lightberry.com
   type: Website
 - url: https://docs.lightberry.com

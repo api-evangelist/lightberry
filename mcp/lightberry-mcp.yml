@@ -3,22 +3,19 @@ method: searched
 source: https://docs.lightberry.com (Notion page "MCP Architecture", 2227fcdf-faa7-804c-ba69-e7d9e8276942)
 status: announced
 status_raw: planned
-note: >-
-  Lightberry publicly documents an MCP architecture, but does NOT publish a consumable
-  hosted or remote MCP server: there is no server URL, no transport declaration, no tool
-  list, and no install instructions. This artifact records the documented design only.
-  Because no server is actually reachable, apis.yml does NOT carry a `type: MCPServer`
-  pointer — re-run the pipeline when Lightberry ships one.
+note: 'Lightberry publicly documents an MCP architecture, but does NOT publish a consumable hosted or
+  remote MCP server: there is no server URL, no transport declaration, no tool list, and no install instructions.
+  This artifact records the documented design only. Because no server is actually reachable, apis.yml
+  does NOT carry a `type: MCPServer` pointer — re-run the pipeline when Lightberry ships one.'
 architecture:
-  summary: >-
-    An MCP server runs on the Lightberry server (not on the robot). Each Lightberry device
-    functions as a REST API endpoint. The MCP server routes tool calls to the correct device
-    by device id, resolving the device IP via Tailscale.
+  summary: An MCP server runs on the Lightberry server (not on the robot). Each Lightberry device functions
+    as a REST API endpoint. The MCP server routes tool calls to the correct device by device id, resolving
+    the device IP via Tailscale.
   points:
   - MCP server runs on the Lightberry server
   - Lightberry device functions as a REST API endpoint
-  - Running the server infrastructure on the client device adds some overhead, but the device
-    would need it anyway if it ran the MCP server locally
+  - Running the server infrastructure on the client device adds some overhead, but the device would need
+    it anyway if it ran the MCP server locally
   - MCP server routes tool calls to the correct device id
   - An API endpoint is planned that fetches the correct device IP from Tailscale
   - Tailscale setup required; initially exposed publicly for speed, to be retrofitted later
@@ -32,3 +29,8 @@ gaps:
 - No documented tool names, inputs, or outputs
 - No OpenAPI for the per-device REST endpoint, so no candidate tool list can be derived
 - No authentication model documented for MCP or device REST access
+deployment:
+  mode: unclear
+  verified: searched
+  checked: '2026-08-12'
+  source: catalog MCP census
